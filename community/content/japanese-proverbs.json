@@ -550,5 +550,17 @@
   "romaji": "Saru mo ki kara ochiru",
   "english": "Even monkeys fall from trees",
   "meaning": "Experts can make mistakes"
- }
+ },
+ {
+  "japanese": "魚心あれば水心",
+  "romaji": "Uogokoro areba mizugokoro",
+  "english": "If fish has heart, water has heart",
+  "meaning": "Good intentions are reciprocated"
+ },
+ {
+  "japanese": "出る釘は打たれる",
+  "romaji": "Deru kugi wa utareru",
+  "english": "The nail that sticks out gets hammered down",
+  "meaning": "Standing out invites criticism"
+}
 ]

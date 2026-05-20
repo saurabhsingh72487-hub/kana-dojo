@@ -467,47 +467,54 @@
     "english": "Shishishi! (alt wording 30)",
     "anime": "One Piece",
     "character": "Monkey D. Luffy"
-},
-{
-  "japanese": "オラに元気を分けてくれ!",
-  "romaji": "Ora ni genki o wakete kure!",
-  "english": "Lend me your energy! (alt wording 52)",
-  "anime": "Dragon Ball Z",
-  "character": "Son Goku"
-},
-{
-  "japanese": "だが…それがいい。",
-  "romaji": "Daga... sore ga ii.",
-  "english": "But... that's what I like. (alt wording 16) (alt wording 68)",
-  "anime": "JoJo's Bizarre Adventure: Diamond is Unbreakable",
-  "character": "Yoshikage Kira"
-},
-{
-  "japanese": "だが…それがいい。",
-  "romaji": "Daga... sore ga ii.",
-  "english": "But... that's what I like. (alt wording 16) (alt wording 68)",
-  "anime": "JoJo's Bizarre Adventure: Diamond is Unbreakable",
-  "character": "Yoshikage Kira"
-},
-{
-  "japanese": "撃っていいのは撃たれる覚悟がある奴だけだ",
-  "romaji": "Utte ii no wa uterareru kakugo ga aru yatsu dake da",
-  "english": "Only those prepared to be shot should pull the trigger. (alt wording 45)",
-  "anime": "Code Geass: Lelouch of the Rebellion",
-  "character": "Lelouch vi Britannia"
-},
-{
-  "japanese": "笑えばいいと思うよ",
-  "romaji": "Waraeba ii to omou yo",
-  "english": "I think you should just laugh.",
-  "anime": "Neon Genesis Evangelion",
-  "character": "Rei Ayanami"
-},
-{
-  "japanese": "だが…それがいい。",
-  "romaji": "Daga... sore ga ii.",
-  "english": "But... that's what I like.",
-  "anime": "JoJo's Bizarre Adventure: Diamond is Unbreakable",
-  "character": "Yoshikage Kira"
-}
+  },
+  {
+    "japanese": "オラに元気を分けてくれ!",
+    "romaji": "Ora ni genki o wakete kure!",
+    "english": "Lend me your energy! (alt wording 52)",
+    "anime": "Dragon Ball Z",
+    "character": "Son Goku"
+  },
+  {
+    "japanese": "だが…それがいい。",
+    "romaji": "Daga... sore ga ii.",
+    "english": "But... that's what I like. (alt wording 16) (alt wording 68)",
+    "anime": "JoJo's Bizarre Adventure: Diamond is Unbreakable",
+    "character": "Yoshikage Kira"
+  },
+  {
+    "japanese": "だが…それがいい。",
+    "romaji": "Daga... sore ga ii.",
+    "english": "But... that's what I like. (alt wording 16) (alt wording 68)",
+    "anime": "JoJo's Bizarre Adventure: Diamond is Unbreakable",
+    "character": "Yoshikage Kira"
+  },
+  {
+    "japanese": "撃っていいのは撃たれる覚悟がある奴だけだ",
+    "romaji": "Utte ii no wa uterareru kakugo ga aru yatsu dake da",
+    "english": "Only those prepared to be shot should pull the trigger. (alt wording 45)",
+    "anime": "Code Geass: Lelouch of the Rebellion",
+    "character": "Lelouch vi Britannia"
+  },
+  {
+    "japanese": "笑えばいいと思うよ",
+    "romaji": "Waraeba ii to omou yo",
+    "english": "I think you should just laugh.",
+    "anime": "Neon Genesis Evangelion",
+    "character": "Rei Ayanami"
+  },
+  {
+    "japanese": "だが…それがいい。",
+    "romaji": "Daga... sore ga ii.",
+    "english": "But... that's what I like.",
+    "anime": "JoJo's Bizarre Adventure: Diamond is Unbreakable",
+    "character": "Yoshikage Kira"
+  },
+  {
+    "japanese": "逃げるのも勇気だぞ",
+    "romaji": "Nigeru no mo yuuki da zo",
+    "english": "Running away can take courage too.",
+    "anime": "Mob Psycho 100",
+    "character": "Arataka Reigen"
+  }
 ]

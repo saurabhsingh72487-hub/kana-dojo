@@ -218,5 +218,11 @@
     "Oden"
   ],
   "correctIndex": 0
+  },
+  {
+    "question": "What is the Japanese term for cherry blossoms? (Community variation 37)",
+    "difficulty": "easy",
+    "answers": ["Sakura", "Ume", "Momiji", "Kiku"],
+    "correctIndex": 0
   }
 ]
