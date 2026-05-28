@@ -312,37 +312,6 @@ export default function ActiveGame<T>({
     }
   }, [questionKey, isTypeMode, setUserAnswer]);
 
-  // Keyboard shortcut for Enter/Space to trigger the action button.
-  // In Type mode, Enter triggers Check/Continue from the input field.
-  // Space is only intercepted when no interactive element is focused.
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      const active = document.activeElement;
-      const tag = active?.tagName?.toLowerCase();
-      const isEnter = event.key === 'Enter';
-      const isSpace = event.code === 'Space' || event.key === ' ';
-
-      if (isEnter) {
-        // Enter always triggers the button (including from the text input)
-        event.preventDefault();
-        buttonRef.current?.click();
-      } else if (isSpace) {
-        // Space only triggers when no interactive element is focused
-        if (
-          active === buttonRef.current ||
-          !tag ||
-          !['input', 'textarea', 'select', 'button'].includes(tag)
-        ) {
-          event.preventDefault();
-          buttonRef.current?.click();
-        }
-      }
-    };
-
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, []);
-
   // Get correct answer for current question
   const correctAnswer = useMemo(() => {
     if (!currentQuestion) return '';
@@ -437,17 +406,87 @@ export default function ActiveGame<T>({
     [isChecking, placedTiles, playClick],
   );
 
-  // Not enough data to render
-  if (!currentQuestion) {
-    return null;
-  }
-
   const canCheck = isTypeMode
     ? userAnswer.trim().length > 0 && !isChecking
     : placedTiles.length > 0 && !isChecking;
   const showContinue = bottomBarState === 'correct';
   const showTryAgain = bottomBarState === 'wrong';
+  // Keyboard shortcuts
+  useEffect(() =>{
+    const handleKeyDown = (event: KeyboardEvent) => {
+      const active = document.activeElement;
+      const tag = active?.tagName?.toLowerCase();
 
+      const isEnter = event.key === 'Enter';
+      const isSpace = event.code === 'Space' || event.key === ' ';
+      const isTab = event.key === 'Tab';
+      const isEscape = event.key === 'Escape';
+
+      // Enter
+      if (isEnter) {
+        event.preventDefault();
+        buttonRef.current?.click();
+      }
+
+      // Space
+      else if (isSpace) {
+        if (
+          active === buttonRef.current ||
+          !tag ||
+          !['input', 'textarea', 'select', 'button'].includes(tag)
+        ) {
+          event.preventDefault();
+          buttonRef.current?.click();
+        }
+      }
+
+      // Escape
+      else if (isEscape) {
+        event.preventDefault();
+        onCancel();
+      }
+
+      // Number keys 1-4
+      else if (['1', '2', '3', '4'].includes(event.key)) {
+        if (isTypeMode || isChecking) return;
+
+        event.preventDefault();
+
+        const index = Number(event.key) - 1;
+        const option = shuffledOptions[index];
+
+        if (option) {
+          handleTileClick(option);
+        }
+      }
+
+      // Tab
+      else if (isTab) {
+        event.preventDefault();
+
+        if (canCheck) {
+          buttonRef.current?.click();
+        }
+      }
+    };
+   
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [
+    canCheck,
+    handleTileClick,
+    isChecking,
+    isTypeMode,
+    onCancel,
+    shuffledOptions,
+  ]);
+   // Not enough data to render
+    if (!currentQuestion) {
+      return null;
+    }
   // Sizing classes based on dojoType (matching exact sizes from each TilesMode implementation)
   // Kana: tiles text-2xl sm:text-3xl, question text-7xl sm:text-8xl
   // Kanji: tiles text-3xl/4xl (kanji) or text-xl/2xl (meaning), question text-8xl/9xl
@@ -719,4 +758,3 @@ export default function ActiveGame<T>({
     </div>
   );
 }
-
