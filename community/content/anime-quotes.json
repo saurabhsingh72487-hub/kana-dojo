@@ -525,17 +525,24 @@
     "character": "Son Goku"
   },
   {
-  "japanese": "貴様ッ！見ているなッ！！",
-  "romaji": "Kisama! Mite iru na!!",
-  "english": "You! You're watching me! (alt wording 11)",
-  "anime": "JoJo's Bizarre Adventure: Stone Ocean",
-  "character": "Jolyne Cujoh"
+    "japanese": "貴様ッ！見ているなッ！！",
+    "romaji": "Kisama! Mite iru na!!",
+    "english": "You! You're watching me! (alt wording 11)",
+    "anime": "JoJo's Bizarre Adventure: Stone Ocean",
+    "character": "Jolyne Cujoh"
   },
   {
-  "japanese": "俺はガンダムだ！",
-  "romaji": "Ore wa Gandamu da!",
-  "english": "I am Gundam! (alt wording 25)",
-  "anime": "Mobile Suit Gundam 00",
-  "character": "Setsuna F. Seiei"
-}
+    "japanese": "俺はガンダムだ！",
+    "romaji": "Ore wa Gandamu da!",
+    "english": "I am Gundam! (alt wording 25)",
+    "anime": "Mobile Suit Gundam 00",
+    "character": "Setsuna F. Seiei"
+  },
+  {
+    "japanese": "次にお前は「やれやれだぜ」と言う！",
+    "romaji": "Tsugi ni omae wa 'yare yare da ze' to iu!",
+    "english": "Next you'll say, 'Good grief!' (alt wording 10) (alt wording 62)",
+    "anime": "JoJo's Bizarre Adventure: Stardust Crusaders",
+    "character": "Joseph Joestar"
+  }
 ]
